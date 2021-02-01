@@ -255,7 +255,11 @@ span i {
   z-index: 1;
   mix-blend-mode: difference;
 }
-
+@media only screen and (max-width: 598px){
+  #object{
+    display: none;
+  }
+}
 .bottom-section {
   width: 100%;
   height: 100vh;

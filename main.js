@@ -15,13 +15,15 @@ const image = document.querySelector(".hover-image");
 
 project.addEventListener("mousemove", (e) => {
   const left = e.clientX;
-  const top = e.clientY;
+  const top = e.clientY ;
+  let xaxis = (window.innerWidth / 2 - e.pageX) / 20;
+  let yaxis = (window.innerHeight / 2 - e.pageY) / 20;
   image.style.top = top + "px";
   image.style.left = left + "px";
   const skewX = left / 100;
   const skewy = top / 100;
   image.style.opacity = 0.7;
-  image.style.transform = `skew(-${skewy}deg,-${skewX}deg) rotateZ(${skewX}deg)`;
+  image.style.transform = `skew(-${skewy}deg,-${skewX}deg) rotateY(${xaxis}deg) rotateX(${yaxis}deg) translate(-50%,-50%)`;
   console.log(`skew(${skewX}deg,${skewy}deg)`);
 });
 
@@ -54,8 +56,8 @@ image7.addEventListener("mouseover", (e) => {
   image.style.backgroundImage = "url('./images/Screenshot (532).png')";
 });
 
-window.addEventListener("onscroll", (e) => {
-  image.style.opacity = 0;
+document.addEventListener("onscroll", (e) => {
+  image.style.backgroundImage = "none";
 });
 
 overlay.addEventListener("animationend", (e) => {
@@ -72,13 +74,13 @@ document.addEventListener("mousemove", function (e) {
 });
 
 top_section.addEventListener("mouseleave", (e) => {
-    cursor.style.display = "none";
-    cursor.style.width = 0 + "px";
-    cursor.style.height = 0 + "px";
+  cursor.style.display = "none";
+  cursor.style.width = 0 + "px";
+  cursor.style.height = 0 + "px";
 });
 
 top_section.addEventListener("mouseenter", (e) => {
-    cursor.style.display = "block";
-    cursor.style.width = 100 + "px";
-    cursor.style.height = 100 + "px";
+  cursor.style.display = "block";
+  cursor.style.width = 100 + "px";
+  cursor.style.height = 100 + "px";
 });

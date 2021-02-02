@@ -37,8 +37,8 @@ header {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
   -webkit-animation: movement 1s ease-in-out 5.7s forwards;
           animation: movement 1s ease-in-out 5.7s forwards;
 }
@@ -265,6 +265,7 @@ span i {
   height: 100vh;
   background-color: #1F1F1F;
   position: relative;
+  perspective:  1500px;
 }
 
 .heading {
@@ -339,6 +340,7 @@ span i {
   height: 150px;
   background: #fff;
   pointer-events: none;
+  transform-style: preserve-3d;
   z-index: 5;
   opacity: 0;
   -webkit-transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
@@ -361,8 +363,8 @@ span i {
   left: 0;
   background-color: #222222;
   z-index: 100;
-  -webkit-transform: translateY(-200%);
-          transform: translateY(-200%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-animation: overlay 6s ease-in-out forwards;
           animation: overlay 6s ease-in-out forwards;
   display: -webkit-box;

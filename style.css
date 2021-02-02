@@ -11,20 +11,16 @@ a {
   color: #fefefe;
 }
 
-body {
-  overflow: hidden;
-}
+
 
 .top-section {
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100%;
   height: 100vh;
   background-color: #222222;
   color: #fefefe;
 }
-main {
-  overflow: hidden;
-}
+
 header {
   height: 15%;
   width: 80%;

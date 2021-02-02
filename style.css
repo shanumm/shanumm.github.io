@@ -22,7 +22,7 @@ body {
   color: #fefefe;
 }
 main {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 header {
   height: 15%;
